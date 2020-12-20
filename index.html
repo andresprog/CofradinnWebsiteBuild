@@ -6,8 +6,8 @@
     <title>Unity WebGL Player | CofradinnGameWebsite</title>
   </head>
   <body style="text-align: center">
-    <div id="unityContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: auto">
-        <script src="Build/Test v1.0.1.loader.js"></script>
+    <canvas id="unity-canvas" style="width: 1080px; height: 720px; background: #231F20"></canvas>
+    <script src="Build/Test v1.0.1.loader.js"></script>
     <script>
       createUnityInstance(document.querySelector("#unity-canvas"), {
         dataUrl: "Build/Test v1.0.1.data.gz",
@@ -19,6 +19,7 @@
         productVersion: "0.1",
       });
     </script>
-    </div>
+        <div style="height:20px; width: %UNITY_WIDTH%px; background: green;" onclick="unityInstance.SetFullscreen(1)"><b>Click here to make it full screen.</b></div>
+        <div id="unityContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px; margin: auto"></div>
   </body>
 </html>
