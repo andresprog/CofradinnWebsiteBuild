@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Unity WebGL Player | CofradinnGameWebsite</title>
+  </head>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 1080px; height: 720px; background: #231F20"></canvas>
+    <script src="Build/Test v1.0.1.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Test v1.0.1.data.gz",
+        frameworkUrl: "Build/Test v1.0.1.framework.js.gz",
+        codeUrl: "Build/Test v1.0.1.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "Cofradinn",
+        productName: "CofradinnGameWebsite",
+        productVersion: "0.1",
+      });
+    </script>
+  </body>
+</html>
